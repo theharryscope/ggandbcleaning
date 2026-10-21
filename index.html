@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GG & B Cleaning Services | Professional Home & Commercial Cleaning</title>
+    <meta name="description" content="GG & B Cleaning Services provides top-tier residential, office, deep cleaning, and post-construction cleaning solutions across Nigeria. Spotless, reliable, and affordable.">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="GG & B Cleaning Services | Spotless Clean Environments">
+    <meta property="og:description" content="Transforming homes, offices, and commercial spaces into pristine environments. Book your cleaning today.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0f2942',
+                            900: '#0B192C',
+                            950: '#060d18'
+                        },
+                        teal: {
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0D9488',
+                            700: '#0f766e'
+                        },
+                        accent: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles & Utilities */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC;
+            color: #1E293B;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Glassmorphism Navigation */
+        .glass-nav {
+            background: rgba(11, 25, 44, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Before/After Drag Slider */
+        .ba-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 1rem;
+            user-select: none;
+        }
+
+        .ba-img-after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ba-img-before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+            border-right: 3px solid #f59e0b;
+            z-index: 10;
+        }
+
+        .ba-slider-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #f59e0b;
+            color: #0B192C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: ew-resize;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 20;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B192C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0D9488;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b;
+        }
+
+        /* Reveal Animation Classes */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Lightbox Image Transition */
+        .lightbox-content {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Responsive height adjustments for before/after */
+        @media (min-width: 768px) {
+            .ba-container {
+                height: 520px;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-teal-500 via-accent-500 to-teal-400 z-50 transition-all duration-150" style="width: 0%;"></div>
+
+    <!-- MAIN HEADER & NAVIGATION -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-slate-800/80 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-navy-900 border border-teal-400/30 flex items-center justify-center text-accent-500 shadow-lg group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-sparkles text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight text-white block font-heading">GG & B</span>
+                        <span class="text-xs uppercase tracking-widest text-teal-400 font-semibold block -mt-1">Cleaning Services</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#home" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 transition-colors">About Us</a>
+                    
+                    <!-- Dropdown Menu -->
+                    <div class="relative group">
+                        <a href="#services" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 flex items-center gap-1 transition-colors py-2">
+                            Services <i class="fa-solid fa-chevron-down text-xs opacity-70 group-hover:rotate-180 transition-transform duration-200"></i>
+                        </a>
+                        <div class="absolute top-full left-0 w-64 bg-navy-900 border border-slate-800 rounded-xl shadow-2xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                            <a href="#services" class="block px-4 py-2 text-xs font-medium text-slate-300 hover:bg-teal-600/20 hover:text-teal-400">Residential Cleaning</a>
+                            <a href="#services" class="block px-4 py-2 text-xs font-medium text-slate-300 hover:bg-teal-600/20 hover:text-teal-400">Deep Cleaning</a>
+                            <a href="#services" class="block px-4 py-2 text-xs font-medium text-slate-300 hover:bg-teal-600/20 hover:text-teal-400">Office & Corporate</a>
+                            <a href="#services" class="block px-4 py-2 text-xs font-medium text-slate-300 hover:bg-teal-600/20 hover:text-teal-400">Post-Construction</a>
+                            <a href="#services" class="block px-4 py-2 text-xs font-medium text-slate-300 hover:bg-teal-600/20 hover:text-teal-400">Move-In / Move-Out</a>
+                            <a href="#services" class="block px-4 py-2 text-xs font-medium text-slate-300 hover:bg-teal-600/20 hover:text-teal-400">Commercial Spaces</a>
+                        </div>
+                    </div>
+
+                    <a href="#process" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 transition-colors">Process</a>
+                    <a href="#portfolio" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 transition-colors">Portfolio</a>
+                    <a href="#testimonials" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 transition-colors">Testimonials</a>
+                    <a href="#faq" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 transition-colors">FAQ</a>
+                    <a href="#contact" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20a%20cleaning%20session." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-amber-600 hover:from-amber-500 hover:to-accent-500 text-navy-950 font-semibold px-5 py-2.5 rounded-full text-sm shadow-md hover:shadow-accent-500/20 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Book a Cleaning</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-navy-950/95 border-b border-slate-800 backdrop-blur-md">
+            <div class="px-4 pt-4 pb-6 space-y-3">
+                <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">Home</a>
+                <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">About Us</a>
+                <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">Our Services</a>
+                <a href="#process" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">Our Process</a>
+                <a href="#portfolio" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">Portfolio & Gallery</a>
+                <a href="#testimonials" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">Testimonials</a>
+                <a href="#faq" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">FAQ</a>
+                <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">Contact Us</a>
+                <div class="pt-2">
+                    <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-accent-500 text-navy-950 font-bold px-4 py-3 rounded-xl text-center">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Book via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="relative bg-navy-900 text-white overflow-hidden py-20 lg:py-28">
+            <!-- Background Decorative Glows -->
+            <div class="absolute -top-32 -left-32 w-96 h-96 bg-teal-500/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left reveal-element">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 text-xs font-semibold tracking-wide uppercase">
+                            <i class="fa-solid fa-broom-ball"></i> Premier Cleaning Solutions
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                            Experience the Difference of <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-accent-400">Professional Cleaning</span>
+                        </h1>
+                        
+                        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            At <strong>GG & B Cleaning Services</strong>, we transform homes, offices, and commercial spaces into spotless, fresh, and welcoming environments. Quality cleaning, reliable service, and exceptional attention to detail are what we deliver.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20a%20cleaning%20service." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-accent-500 to-amber-600 hover:from-amber-500 hover:to-accent-500 text-navy-950 font-bold px-7 py-4 rounded-xl shadow-lg hover:shadow-accent-500/25 transition-all transform hover:-translate-y-1 text-base">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Book a Cleaning</span>
+                            </a>
+                            <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-slate-700 hover:border-teal-400 bg-slate-800/60 hover:bg-slate-800 text-white font-semibold px-7 py-4 rounded-xl transition-all text-base">
+                                <span>Explore Our Services</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+
+                        <!-- Highlights Pills -->
+                        <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-800/80">
+                            <div class="flex items-center justify-center lg:justify-start gap-2 text-slate-300 text-xs font-medium">
+                                <i class="fa-solid fa-circle-check text-teal-400"></i> Satisfaction Focused
+                            </div>
+                            <div class="flex items-center justify-center lg:justify-start gap-2 text-slate-300 text-xs font-medium">
+                                <i class="fa-solid fa-circle-check text-teal-400"></i> Eco-Friendly Solutions
+                            </div>
+                            <div class="flex items-center justify-center lg:justify-start gap-2 text-slate-300 text-xs font-medium">
+                                <i class="fa-solid fa-circle-check text-teal-400"></i> Vetted Cleaners
+                            </div>
+                            <div class="flex items-center justify-center lg:justify-start gap-2 text-slate-300 text-xs font-medium">
+                                <i class="fa-solid fa-circle-check text-teal-400"></i> Flexible Schedules
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Visual -->
+                    <div class="lg:col-span-5 relative reveal-element">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-teal-500 to-accent-500 rounded-3xl rotate-3 scale-95 opacity-20 blur-lg"></div>
+                            
+                            <!-- Hero Image -->
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=80" alt="Professional Cleaner at work in a bright room" class="relative rounded-3xl shadow-2xl border border-slate-700/50 w-full h-[450px] object-cover" loading="eager">
+                            
+                            <!-- Floating Trust Badge -->
+                            <div class="absolute -bottom-6 -left-6 bg-navy-900/90 border border-slate-700 backdrop-blur-md p-4 rounded-2xl shadow-xl hidden sm:flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-shield-heart text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-semibold text-white">Trust & Quality Guaranteed</p>
+                                    <p class="text-[11px] text-slate-400">Spotless spaces every single time</p>
+                                </div>
+                            </div>
+
+                            <!-- Phone Quick Tag -->
+                            <div class="absolute -top-6 -right-6 bg-accent-500 text-navy-950 font-bold px-4 py-2 rounded-2xl shadow-lg hidden sm:flex items-center gap-2 text-xs">
+                                <i class="fa-solid fa-phone"></i> +234 706 497 3487
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US SECTION -->
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Graphic Card -->
+                    <div class="lg:col-span-5 reveal-element">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Spotless Clean Living Room Interior" class="rounded-3xl shadow-xl w-full h-[420px] object-cover">
+                            
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-t from-navy-900/70 via-transparent to-transparent flex items-end p-8">
+                                <div class="text-white">
+                                    <p class="text-sm font-semibold uppercase tracking-wider text-teal-400">GG & B Standard</p>
+                                    <h3 class="text-xl font-bold mt-1">Dedicated to Hygenic Excellence</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Text Info -->
+                    <div class="lg:col-span-7 space-y-6 reveal-element">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-full border border-teal-200">About Our Company</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Your Trusted Partner for a Cleaner Space</h2>
+                        </div>
+                        
+                        <p class="text-slate-600 leading-relaxed">
+                            <strong>GG & B Cleaning Services</strong> is a professional cleaning company committed to maintaining clean, hygienic, comfortable, and presentable environments. We cater to residential properties, offices, corporate organizations, commercial centers, and post-construction sites.
+                        </p>
+
+                        <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-teal-600/10 text-teal-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-user-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-navy-900 text-sm">Professional Delivery</h4>
+                                    <p class="text-slate-500 text-xs mt-0.5">Trained staff adhering to strict quality standards.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-teal-600/10 text-teal-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-magnifying-glass font-bold"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-navy-900 text-sm">Attention to Detail</h4>
+                                    <p class="text-slate-500 text-xs mt-0.5">We tackle hidden dust, corners, and tough spots.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-teal-600/10 text-teal-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-navy-900 text-sm">Reliable & Convenient</h4>
+                                    <p class="text-slate-500 text-xs mt-0.5">Timely service scheduled at your convenience.</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-teal-600/10 text-teal-600 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-face-smile"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-navy-900 text-sm">Customer Satisfaction</h4>
+                                    <p class="text-slate-500 text-xs mt-0.5">Custom solutions designed around your needs.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 flex items-center gap-4">
+                            <a href="#services" class="inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-medium px-6 py-3 rounded-xl transition-colors text-sm">
+                                <span>Learn More About Our Services</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="py-20 bg-slate-50 border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                    <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-100/60 px-3.5 py-1.5 rounded-full">Our Offerings</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Comprehensive Cleaning Solutions</h2>
+                    <p class="text-slate-600 mt-3 text-sm sm:text-base">We provide specialized cleaning services tailored for homes, corporate offices, commercial property owners, and event organizers.</p>
+                </div>
+
+                <!-- 10 Service Cards Grid -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- 1. Residential Cleaning -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 overflow-hidden group flex flex-col justify-between reveal-element">
+                        <div>
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=80" alt="Residential Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 bg-navy-900/80 backdrop-blur-md text-teal-400 p-2 rounded-xl text-sm">
+                                    <i class="fa-solid fa-house font-bold"></i>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-navy-900 group-hover:text-teal-600 transition-colors">Residential Cleaning</h3>
+                                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Complete cleaning of homes, apartments, bedrooms, kitchens, living areas, and bathrooms for a fresh home atmosphere.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20the%20Residential%20Cleaning%20service." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-teal-600 text-slate-800 hover:text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition-colors">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>Book This Service</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 2. Deep Cleaning -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 overflow-hidden group flex flex-col justify-between reveal-element">
+                        <div>
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Deep Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 bg-navy-900/80 backdrop-blur-md text-teal-400 p-2 rounded-xl text-sm">
+                                    <i class="fa-solid fa-hand-sparkles"></i>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-navy-900 group-hover:text-teal-600 transition-colors">Deep Cleaning</h3>
+                                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Detailed cleaning targeting hard-to-reach areas, stubborn grime, hidden corners, and neglected spaces.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20the%20Deep%20Cleaning%20service." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-teal-600 text-slate-800 hover:text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition-colors">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>Book This Service</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 3. Office Cleaning -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 overflow-hidden group flex flex-col justify-between reveal-element">
+                        <div>
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Office Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 bg-navy-900/80 backdrop-blur-md text-teal-400 p-2 rounded-xl text-sm">
+                                    <i class="fa-solid fa-building font-bold"></i>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-navy-900 group-hover:text-teal-600 transition-colors">Office Cleaning</h3>
+                                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Maintaining pristine, hygienic, and organized workplace environments to boost employee productivity and corporate image.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20the%20Office%20Cleaning%20service." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-teal-600 text-slate-800 hover:text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition-colors">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>Book This Service</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 4. Post-Construction Cleaning -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 overflow-hidden group flex flex-col justify-between reveal-element">
+                        <div>
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Post-Construction Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 bg-navy-900/80 backdrop-blur-md text-teal-400 p-2 rounded-xl text-sm">
+                                    <i class="fa-solid fa-helmet-safety"></i>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-navy-900 group-hover:text-teal-600 transition-colors">Post-Construction Cleaning</h3>
+                                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Thorough removal of renovation dust, cement stains, paint splatter, and construction debris to prepare spaces for handover.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20the%20Post-Construction%20Cleaning%20service." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-teal-600 text-slate-800 hover:text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition-colors">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>Book This Service</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 5. Move-In / Move-Out Cleaning -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 overflow-hidden group flex flex-col justify-between reveal-element">
+                        <div>
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80" alt="Move In Move Out Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 bg-navy-900/80 backdrop-blur-md text-teal-400 p-2 rounded-xl text-sm">
+                                    <i class="fa-solid fa-truck-ramp-box"></i>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-navy-900 group-hover:text-teal-600 transition-colors">Move-In / Move-Out Cleaning</h3>
+                                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Comprehensive property cleaning designed to prepare homes for new tenants or restore spaces after moving out.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20the%20Move-In%20/%20Move-Out%20Cleaning%20service." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-teal-600 text-slate-800 hover:text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition-colors">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>Book This Service</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 6. Commercial Cleaning -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 overflow-hidden group flex flex-col justify-between reveal-element">
+                        <div>
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?auto=format&fit=crop&w=800&q=80" alt="Commercial Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 bg-navy-900/80 backdrop-blur-md text-teal-400 p-2 rounded-xl text-sm">
+                                    <i class="fa-solid fa-store"></i>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-navy-900 group-hover:text-teal-600 transition-colors">Commercial Cleaning</h3>
+                                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Customized cleaning programs for retail stores, showrooms, financial institutions, and business premises.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20the%20Commercial%20Cleaning%20service." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-teal-600 text-slate-800 hover:text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition-colors">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>Book This Service</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 7. Floor & Surface Cleaning -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 overflow-hidden group flex flex-col justify-between reveal-element">
+                        <div>
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Floor & Surface Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 bg-navy-900/80 backdrop-blur-md text-teal-400 p-2 rounded-xl text-sm">
+                                    <i class="fa-solid fa-rug"></i>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-navy-900 group-hover:text-teal-600 transition-colors">Floor & Surface Cleaning</h3>
+                                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Scrubbing, sanitizing, and polishing tiles, hardwood, marble, and composite flooring with surface-safe techniques.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20the%20Floor%20%26%20Surface%20Cleaning%20service." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-teal-600 text-slate-800 hover:text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition-colors">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>Book This Service</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 8. Upholstery & Furniture Cleaning -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 overflow-hidden group flex flex-col justify-between reveal-element">
+                        <div>
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="Upholstery & Furniture Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 bg-navy-900/80 backdrop-blur-md text-teal-400 p-2 rounded-xl text-sm">
+                                    <i class="fa-solid fa-couch"></i>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-navy-900 group-hover:text-teal-600 transition-colors">Upholstery & Furniture</h3>
+                                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Deep extraction and stain treatment for couches, office chairs, armchairs, and delicate upholstered furniture.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20the%20Upholstery%20Cleaning%20service." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-teal-600 text-slate-800 hover:text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition-colors">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>Book This Service</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 9. Window & Glass Cleaning -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 overflow-hidden group flex flex-col justify-between reveal-element">
+                        <div>
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Window & Glass Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 bg-navy-900/80 backdrop-blur-md text-teal-400 p-2 rounded-xl text-sm">
+                                    <i class="fa-solid fa-[#10B981] fa-window-maximize"></i>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-navy-900 group-hover:text-teal-600 transition-colors">Window & Glass Cleaning</h3>
+                                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Streak-free cleaning for accessible interior and exterior windows, glass doors, mirrors, and glass partitions.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20the%20Window%20%26%20Glass%20Cleaning%20service." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-teal-600 text-slate-800 hover:text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition-colors">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>Book This Service</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 10. Event Venue Cleaning -->
+                    <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 overflow-hidden group flex flex-col justify-between sm:col-span-2 lg:col-span-1 reveal-element">
+                        <div>
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Event Venue Cleaning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute top-3 left-3 bg-navy-900/80 backdrop-blur-md text-teal-400 p-2 rounded-xl text-sm">
+                                    <i class="fa-solid fa-champagne-glasses"></i>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-navy-900 group-hover:text-teal-600 transition-colors">Event Venue Cleaning</h3>
+                                <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Pre-event preparation and fast post-event cleanup for halls, party spaces, weddings, and corporate gatherings.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20the%20Event%20Venue%20Cleaning%20service." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-teal-600 text-slate-800 hover:text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition-colors">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>Book This Service</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US SECTION -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                    <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200">Our Core Strengths</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Why Choose GG & B Cleaning Services?</h2>
+                    <p class="text-slate-600 mt-3 text-sm sm:text-base">We go above and beyond standard cleaning to deliver visible quality, reliability, and peace of mind.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-teal-400/50 hover:shadow-lg transition-all group reveal-element">
+                        <div class="w-14 h-14 rounded-2xl bg-teal-600/10 text-teal-600 flex items-center justify-center text-2xl group-hover:bg-teal-600 group-hover:text-white transition-colors mb-6">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Professional Approach</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Our cleaners are punctual, respectful, trained, and equipped with the right techniques for every space.</p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-teal-400/50 hover:shadow-lg transition-all group reveal-element">
+                        <div class="w-14 h-14 rounded-2xl bg-teal-600/10 text-teal-600 flex items-center justify-center text-2xl group-hover:bg-teal-600 group-hover:text-white transition-colors mb-6">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Attention to Detail</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">We pay special attention to hidden spots, corners, baseboards, and high-touch surface areas.</p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-teal-400/50 hover:shadow-lg transition-all group reveal-element">
+                        <div class="w-14 h-14 rounded-2xl bg-teal-600/10 text-teal-600 flex items-center justify-center text-2xl group-hover:bg-teal-600 group-hover:text-white transition-colors mb-6">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Reliable Service</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Count on us to show up on schedule and execute the scope of work thoroughly without delays.</p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-teal-400/50 hover:shadow-lg transition-all group reveal-element">
+                        <div class="w-14 h-14 rounded-2xl bg-teal-600/10 text-teal-600 flex items-center justify-center text-2xl group-hover:bg-teal-600 group-hover:text-white transition-colors mb-6">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Customer-Focused Solutions</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">We tailor our cleaning packages specifically around your property size, schedule, and personal preferences.</p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-teal-400/50 hover:shadow-lg transition-all group reveal-element">
+                        <div class="w-14 h-14 rounded-2xl bg-teal-600/10 text-teal-600 flex items-center justify-center text-2xl group-hover:bg-teal-600 group-hover:text-white transition-colors mb-6">
+                            <i class="fa-solid fa-sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Quality Results</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">We leave every space noticeably clean, hygienic, pleasantly fresh, and ready for immediate comfortable living or working.</p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-teal-400/50 hover:shadow-lg transition-all group reveal-element">
+                        <div class="w-14 h-14 rounded-2xl bg-teal-600/10 text-teal-600 flex items-center justify-center text-2xl group-hover:bg-teal-600 group-hover:text-white transition-colors mb-6">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Flexible Arrangements</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Whether you require a one-time deep clean or ongoing weekly/monthly cleaning, we work around your schedule.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR PROCESS TIMELINE -->
+        <section id="process" class="py-20 bg-navy-900 text-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                    <span class="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-500/10 px-3.5 py-1.5 rounded-full border border-teal-500/30">Simple & Seamless</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Our 4-Step Cleaning Process</h2>
+                    <p class="text-slate-400 mt-3 text-sm sm:text-base">Arranging a professional cleaning session with GG & B is quick and hassle-free.</p>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-8 relative">
+                    
+                    <!-- Connector line for desktop -->
+                    <div class="hidden md:block absolute top-12 left-1/8 right-1/8 h-0.5 bg-slate-800 z-0"></div>
+
+                    <!-- Step 1 -->
+                    <div class="relative z-10 text-center space-y-4 reveal-element">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-navy-950 border-2 border-teal-500 text-teal-400 flex items-center justify-center text-xl font-bold shadow-lg">
+                            01
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Contact Us</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm">Reach out via phone, WhatsApp, or our web form to tell us about your space.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative z-10 text-center space-y-4 reveal-element">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-navy-950 border-2 border-accent-500 text-accent-500 flex items-center justify-center text-xl font-bold shadow-lg">
+                            02
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Discuss Requirements</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm">We confirm the property size, scope of cleaning needed, and preferred dates.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative z-10 text-center space-y-4 reveal-element">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-navy-950 border-2 border-teal-500 text-teal-400 flex items-center justify-center text-xl font-bold shadow-lg">
+                            03
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Get a Quote</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm">Receive a clear, transparent quote based on your specific requirements.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative z-10 text-center space-y-4 reveal-element">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-navy-950 border-2 border-accent-500 text-accent-500 flex items-center justify-center text-xl font-bold shadow-lg">
+                            04
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Enjoy a Spotless Space</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm">Our team carries out the work thoroughly so you can relax in a fresh environment.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PORTFOLIO / GALLERY SECTION -->
+        <section id="portfolio" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12 reveal-element">
+                    <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200">Our Project Gallery</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">See Our Work in Action</h2>
+                    <p class="text-slate-600 mt-3 text-sm sm:text-base">Explore sample visual representations of our high-standard cleaning transformations across various settings.</p>
+                </div>
+
+                <!-- Category Filter Pills -->
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 reveal-element">
+                    <button data-filter="all" class="portfolio-filter-btn active px-5 py-2 rounded-full text-xs font-semibold bg-navy-900 text-white transition-all shadow-md">All Projects</button>
+                    <button data-filter="residential" class="portfolio-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">Residential</button>
+                    <button data-filter="office" class="portfolio-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">Office Cleaning</button>
+                    <button data-filter="deep" class="portfolio-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">Deep Cleaning</button>
+                    <button data-filter="commercial" class="portfolio-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">Commercial</button>
+                    <button data-filter="post-construction" class="portfolio-filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">Post-Construction</button>
+                </div>
+
+                <!-- Portfolio Grid -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolioGrid">
+                    
+                    <!-- Item 1 -->
+                    <div class="portfolio-item group relative overflow-hidden rounded-2xl shadow-sm border border-slate-200 cursor-pointer h-72" data-category="residential" data-title="Pristine Living Room" data-desc="Complete dusting, vacuuming, and furniture polishing.">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Pristine Living Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                            <span class="text-xs font-bold text-accent-400 uppercase tracking-wider">Residential</span>
+                            <h4 class="text-lg font-bold text-white mt-1">Pristine Living Room</h4>
+                            <p class="text-xs text-slate-300 mt-1">Click to view full image</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="portfolio-item group relative overflow-hidden rounded-2xl shadow-sm border border-slate-200 cursor-pointer h-72" data-category="office" data-title="Modern Executive Office" data-desc="Desk sanitization and streak-free window cleaning.">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Modern Executive Office" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                            <span class="text-xs font-bold text-accent-400 uppercase tracking-wider">Office Cleaning</span>
+                            <h4 class="text-lg font-bold text-white mt-1">Executive Office Desk Area</h4>
+                            <p class="text-xs text-slate-300 mt-1">Click to view full image</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="portfolio-item group relative overflow-hidden rounded-2xl shadow-sm border border-slate-200 cursor-pointer h-72" data-category="deep" data-title="Sparkling Kitchen Sanitization" data-desc="Degreasing stovetops, deep scrubbing countertops.">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Sparkling Kitchen Sanitization" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                            <span class="text-xs font-bold text-accent-400 uppercase tracking-wider">Deep Cleaning</span>
+                            <h4 class="text-lg font-bold text-white mt-1">Sparkling Kitchen Sanitization</h4>
+                            <p class="text-xs text-slate-300 mt-1">Click to view full image</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="portfolio-item group relative overflow-hidden rounded-2xl shadow-sm border border-slate-200 cursor-pointer h-72" data-category="commercial" data-title="Retail Showroom Floor" data-desc="High-shine floor buffing and glass partitions.">
+                        <img src="https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?auto=format&fit=crop&w=800&q=80" alt="Retail Showroom Floor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                            <span class="text-xs font-bold text-accent-400 uppercase tracking-wider">Commercial</span>
+                            <h4 class="text-lg font-bold text-white mt-1">Retail Store Showroom</h4>
+                            <p class="text-xs text-slate-300 mt-1">Click to view full image</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="portfolio-item group relative overflow-hidden rounded-2xl shadow-sm border border-slate-200 cursor-pointer h-72" data-category="post-construction" data-title="Post-Renovation Clean-up" data-desc="Dust extraction and paint spill cleanup on tile floor.">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Post-Renovation Clean-up" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                            <span class="text-xs font-bold text-accent-400 uppercase tracking-wider">Post-Construction</span>
+                            <h4 class="text-lg font-bold text-white mt-1">Post-Renovation Site</h4>
+                            <p class="text-xs text-slate-300 mt-1">Click to view full image</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="portfolio-item group relative overflow-hidden rounded-2xl shadow-sm border border-slate-200 cursor-pointer h-72" data-category="residential" data-title="Bathroom Deep Wash" data-desc="Tile grout scrubbing, mirror polishing, and disinfections.">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Bathroom Deep Wash" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                            <span class="text-xs font-bold text-accent-400 uppercase tracking-wider">Residential</span>
+                            <h4 class="text-lg font-bold text-white mt-1">Bathroom Deep Wash</h4>
+                            <p class="text-xs text-slate-300 mt-1">Click to view full image</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LIGHTBOX MODAL -->
+        <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-navy-950/95 backdrop-blur-md flex items-center justify-center p-4">
+            <button id="closeLightbox" aria-label="Close Lightbox Modal" class="absolute top-6 right-6 text-white hover:text-accent-500 text-3xl focus:outline-none z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button id="prevLightbox" aria-label="Previous Image" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-navy-900/80 text-white hover:text-accent-500 border border-slate-700 flex items-center justify-center text-xl z-10 focus:outline-none">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="nextLightbox" aria-label="Next Image" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-navy-900/80 text-white hover:text-accent-500 border border-slate-700 flex items-center justify-center text-xl z-10 focus:outline-none">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <div class="max-w-4xl w-full text-center space-y-4">
+                <img id="lightboxImage" src="" alt="Portfolio Image View" class="max-h-[75vh] mx-auto rounded-2xl shadow-2xl object-contain border border-slate-800">
+                <div>
+                    <h3 id="lightboxTitle" class="text-xl font-bold text-white"></h3>
+                    <p id="lightboxDesc" class="text-sm text-slate-400 mt-1"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BEFORE & AFTER SECTION -->
+        <section class="py-20 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-5 space-y-6 reveal-element">
+                        <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-100/60 px-3.5 py-1.5 rounded-full">Visible Difference</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900">Before & After Cleaning Showcase</h2>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            Drag the interactive slider to see the transformative power of a thorough GG & B deep cleaning session.
+                        </p>
+                        <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs flex items-center gap-3">
+                            <i class="fa-solid fa-hand-pointer text-lg text-amber-600 shrink-0"></i>
+                            <span><strong>Interactive Tool:</strong> Grab and drag the yellow slider bar left or right to compare the before and after states.</span>
+                        </div>
+                    </div>
+
+                    <!-- Drag Slider Container -->
+                    <div class="lg:col-span-7 reveal-element">
+                        <div class="ba-container shadow-2xl border-4 border-white bg-slate-200" id="baSlider">
+                            <!-- After Image (Background) -->
+                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80" alt="Clean Kitchen After" class="ba-img-after">
+                            <!-- Label After -->
+                            <span class="absolute bottom-4 right-4 bg-navy-900/80 text-white font-bold text-xs px-3 py-1.5 rounded-lg z-10 uppercase tracking-wider">After Cleaning</span>
+
+                            <!-- Before Image (Clipped overlay) -->
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80" alt="Dirty Kitchen Before" class="ba-img-before" id="baBeforeImg">
+                            <!-- Label Before -->
+                            <span class="absolute bottom-4 left-4 bg-amber-500 text-navy-950 font-bold text-xs px-3 py-1.5 rounded-lg z-20 uppercase tracking-wider">Before Cleaning</span>
+
+                            <!-- Draggable handle -->
+                            <div class="ba-slider-handle" id="baHandle">
+                                <i class="fa-solid fa-arrows-left-right text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS CAROUSEL SECTION -->
+        <section id="testimonials" class="py-20 bg-navy-900 text-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                    <span class="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-500/10 px-3.5 py-1.5 rounded-full border border-teal-500/30">Client Experience</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">What Our Clients Say</h2>
+                    <p class="text-slate-400 mt-3 text-sm sm:text-base">Sample testimonials highlighting our dedication to cleanliness and reliability.</p>
+                </div>
+
+                <div class="relative max-w-4xl mx-auto" id="testimonialSlider">
+                    
+                    <!-- Carousel Container -->
+                    <div class="overflow-hidden">
+                        <div class="flex transition-transform duration-500 ease-in-out" id="testimonialTrack">
+                            
+                            <!-- Slide 1 -->
+                            <div class="w-full shrink-0 px-4">
+                                <div class="bg-navy-950 p-8 sm:p-10 rounded-3xl border border-slate-800 text-center space-y-6 shadow-xl">
+                                    <div class="flex justify-center text-accent-400 gap-1 text-sm">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-300 text-base sm:text-lg italic leading-relaxed">
+                                        “GG & B Cleaning Services transformed our new apartment after moving in. The floors, windows, and kitchen surfaces were spotless. They arrived on time and did an amazing job!”
+                                    </p>
+                                    <div>
+                                        <h4 class="font-bold text-white text-base">Client Feedback Placeholder</h4>
+                                        <p class="text-xs text-teal-400 mt-0.5">Residential Deep Cleaning Service</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="w-full shrink-0 px-4">
+                                <div class="bg-navy-950 p-8 sm:p-10 rounded-3xl border border-slate-800 text-center space-y-6 shadow-xl">
+                                    <div class="flex justify-center text-accent-400 gap-1 text-sm">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-300 text-base sm:text-lg italic leading-relaxed">
+                                        “Our office space has never looked more professional. GG & B maintains our workspace weekly, and their attention to details on desks and glass doors is impressive.”
+                                    </p>
+                                    <div>
+                                        <h4 class="font-bold text-white text-base">Corporate Client Demo</h4>
+                                        <p class="text-xs text-teal-400 mt-0.5">Weekly Office Cleaning</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="w-full shrink-0 px-4">
+                                <div class="bg-navy-950 p-8 sm:p-10 rounded-3xl border border-slate-800 text-center space-y-6 shadow-xl">
+                                    <div class="flex justify-center text-accent-400 gap-1 text-sm">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="text-slate-300 text-base sm:text-lg italic leading-relaxed">
+                                        “After finishing building construction, the site was filled with dust and residue. GG & B cleared everything out thoroughly. Highly recommended!”
+                                    </p>
+                                    <div>
+                                        <h4 class="font-bold text-white text-base">Property Owner Sample</h4>
+                                        <p class="text-xs text-teal-400 mt-0.5">Post-Construction Cleaning</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Nav Controls -->
+                    <button id="prevTestimonial" aria-label="Previous Testimonial" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-6 w-10 h-10 rounded-full bg-navy-800 border border-slate-700 text-white hover:text-accent-500 flex items-center justify-center transition-all">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="nextTestimonial" aria-label="Next Testimonial" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-6 w-10 h-10 rounded-full bg-navy-800 border border-slate-700 text-white hover:text-accent-500 flex items-center justify-center transition-all">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Indicators -->
+                    <div class="flex justify-center gap-2 mt-8" id="testimonialDots">
+                        <button aria-label="Slide 1" class="w-3 h-3 rounded-full bg-accent-500 transition-all"></button>
+                        <button aria-label="Slide 2" class="w-3 h-3 rounded-full bg-slate-700 transition-all"></button>
+                        <button aria-label="Slide 3" class="w-3 h-3 rounded-full bg-slate-700 transition-all"></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION BANNER -->
+        <section class="py-16 bg-gradient-to-r from-teal-700 via-teal-600 to-navy-900 text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 text-center md:text-left">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ready for a Cleaner, Fresher Space?</h2>
+                    <p class="text-teal-100 text-sm sm:text-base max-w-2xl">Let GG & B Cleaning Services help you maintain a clean, comfortable, and welcoming environment today.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 shrink-0 w-full sm:w-auto">
+                    <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20chat%20about%20booking%20a%20cleaning%20service." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-amber-500 text-navy-950 font-bold px-6 py-3.5 rounded-xl shadow-lg transition-all text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Chat With Us on WhatsApp</span>
+                    </a>
+                    <a href="tel:+2347064973487" class="inline-flex items-center justify-center gap-2 bg-navy-950 hover:bg-navy-900 text-white font-semibold px-6 py-3.5 rounded-xl border border-slate-700 transition-all text-sm">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                        <span>Call Us Today</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FREQUENTLY ASKED QUESTIONS (FAQ) -->
+        <section id="faq" class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                    <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200">Got Questions?</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Frequently Asked Questions</h2>
+                    <p class="text-slate-600 mt-3 text-sm sm:text-base">Find quick answers to common questions about our cleaning services.</p>
+                </div>
+
+                <!-- FAQ Accordion Container -->
+                <div class="space-y-4" id="faqAccordion">
+                    
+                    <!-- Q1 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden reveal-element">
+                        <button class="faq-btn w-full p-6 text-left font-bold text-navy-900 text-base sm:text-lg flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <span>What types of cleaning services do you offer?</span>
+                            <i class="fa-solid fa-chevron-down text-sm text-slate-500 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-2 text-slate-600 text-xs sm:text-sm leading-relaxed bg-white border-t border-slate-100">
+                            We offer residential cleaning, deep cleaning, office & corporate cleaning, post-construction cleaning, move-in/move-out cleaning, commercial cleaning, floor & surface care, upholstery cleaning, window/glass cleaning, and event venue cleaning.
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden reveal-element">
+                        <button class="faq-btn w-full p-6 text-left font-bold text-navy-900 text-base sm:text-lg flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <span>How can I book a cleaning service with GG & B?</span>
+                            <i class="fa-solid fa-chevron-down text-sm text-slate-500 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-2 text-slate-600 text-xs sm:text-sm leading-relaxed bg-white border-t border-slate-100">
+                            You can easily book by clicking any of our WhatsApp buttons across the website, calling us directly at +234 706 497 3487, or filling out the interactive enquiry form on our Contact section.
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden reveal-element">
+                        <button class="faq-btn w-full p-6 text-left font-bold text-navy-900 text-base sm:text-lg flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <span>Do you clean both residential and commercial properties?</span>
+                            <i class="fa-solid fa-chevron-down text-sm text-slate-500 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-2 text-slate-600 text-xs sm:text-sm leading-relaxed bg-white border-t border-slate-100">
+                            Yes! We cater to private homes, apartments, corporate offices, commercial shops, show areas, and event venues.
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden reveal-element">
+                        <button class="faq-btn w-full p-6 text-left font-bold text-navy-900 text-base sm:text-lg flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <span>Can I request a detailed deep cleaning service?</span>
+                            <i class="fa-solid fa-chevron-down text-sm text-slate-500 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-2 text-slate-600 text-xs sm:text-sm leading-relaxed bg-white border-t border-slate-100">
+                            Absolulkey. Our deep cleaning service covers thorough scrubbing of hidden spots, kitchen appliances, bathroom grout, window sills, and stubborn stains.
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden reveal-element">
+                        <button class="faq-btn w-full p-6 text-left font-bold text-navy-900 text-base sm:text-lg flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <span>How do I get an exact cleaning quotation?</span>
+                            <i class="fa-solid fa-chevron-down text-sm text-slate-500 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-2 text-slate-600 text-xs sm:text-sm leading-relaxed bg-white border-t border-slate-100">
+                            We discuss your specific property size and scope of cleaning required over phone or WhatsApp, then provide a transparent quotation prior to starting work.
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden reveal-element">
+                        <button class="faq-btn w-full p-6 text-left font-bold text-navy-900 text-base sm:text-lg flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <span>Can I arrange a cleaning appointment for a specific date?</span>
+                            <i class="fa-solid fa-chevron-down text-sm text-slate-500 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-2 text-slate-600 text-xs sm:text-sm leading-relaxed bg-white border-t border-slate-100">
+                            Yes, you can specify your preferred date and time when contacting us or using our online enquiry form.
+                        </div>
+                    </div>
+
+                    <!-- Q7 -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden reveal-element">
+                        <button class="faq-btn w-full p-6 text-left font-bold text-navy-900 text-base sm:text-lg flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <span>How can I contact GG & B Cleaning Services?</span>
+                            <i class="fa-solid fa-chevron-down text-sm text-slate-500 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden p-6 pt-2 text-slate-600 text-xs sm:text-sm leading-relaxed bg-white border-t border-slate-100">
+                            You can reach us by phone at +234 706 497 3487, email at ggandcleaningservices@gmail.com, or through WhatsApp.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-20 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid lg:grid-cols-12 gap-12">
+                    
+                    <!-- Left Contact Info Card -->
+                    <div class="lg:col-span-5 space-y-8 reveal-element">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-100/60 px-3.5 py-1.5 rounded-full">Get In Touch</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Let's Discuss Your Cleaning Needs</h2>
+                            <p class="text-slate-600 mt-2 text-xs sm:text-sm leading-relaxed">Have questions or ready to book? Reach out directly via phone, email, or WhatsApp message.</p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Phone -->
+                            <a href="tel:+2347064973487" class="flex items-center gap-4 p-5 rounded-2xl bg-white border border-slate-200 hover:border-teal-400 hover:shadow-md transition-all group">
+                                <div class="w-12 h-12 rounded-xl bg-teal-600/10 text-teal-600 group-hover:bg-teal-600 group-hover:text-white flex items-center justify-center text-lg transition-colors">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-semibold text-slate-500 uppercase">Call Us</p>
+                                    <p class="text-base font-bold text-navy-900 mt-0.5">+234 706 497 3487</p>
+                                </div>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:ggandcleaningservices@gmail.com" class="flex items-center gap-4 p-5 rounded-2xl bg-white border border-slate-200 hover:border-teal-400 hover:shadow-md transition-all group">
+                                <div class="w-12 h-12 rounded-xl bg-teal-600/10 text-teal-600 group-hover:bg-teal-600 group-hover:text-white flex items-center justify-center text-lg transition-colors">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-semibold text-slate-500 uppercase">Email Us</p>
+                                    <p class="text-sm font-bold text-navy-900 mt-0.5 break-all">ggandcleaningservices@gmail.com</p>
+                                </div>
+                            </a>
+
+                            <!-- WhatsApp -->
+                            <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-5 rounded-2xl bg-white border border-slate-200 hover:border-teal-400 hover:shadow-md transition-all group">
+                                <div class="w-12 h-12 rounded-xl bg-teal-600/10 text-teal-600 group-hover:bg-teal-600 group-hover:text-white flex items-center justify-center text-lg transition-colors">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-semibold text-slate-500 uppercase">WhatsApp Chat</p>
+                                    <p class="text-sm font-bold text-navy-900 mt-0.5">+234 706 497 3487</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Booking / Enquiry Form -->
+                    <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-xl reveal-element">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Book a Service or Request a Quote</h3>
+                        <p class="text-xs text-slate-500 mb-6">Fill in your details below. Submitting will launch WhatsApp pre-filled with your enquiry details for instant communication.</p>
+
+                        <form id="contactForm" class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="fullName" class="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
+                                    <input type="text" id="fullName" required placeholder="e.g. Chukwuma Adebayo" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-xs sm:text-sm">
+                                </div>
+                                <div>
+                                    <label for="phoneNum" class="block text-xs font-semibold text-slate-700 mb-1">Phone Number *</label>
+                                    <input type="tel" id="phoneNum" required placeholder="e.g. 08012345678" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-xs sm:text-sm">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="emailAddr" class="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
+                                    <input type="email" id="emailAddr" placeholder="e.g. name@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-xs sm:text-sm">
+                                </div>
+                                <div>
+                                    <label for="serviceSelect" class="block text-xs font-semibold text-slate-700 mb-1">Service Needed *</label>
+                                    <select id="serviceSelect" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-xs sm:text-sm bg-white">
+                                        <option value="">-- Select a Service --</option>
+                                        <option value="Residential Cleaning">Residential Cleaning</option>
+                                        <option value="Deep Cleaning">Deep Cleaning</option>
+                                        <option value="Office Cleaning">Office Cleaning</option>
+                                        <option value="Post-Construction Cleaning">Post-Construction Cleaning</option>
+                                        <option value="Move-In / Move-Out Cleaning">Move-In / Move-Out Cleaning</option>
+                                        <option value="Commercial Cleaning">Commercial Cleaning</option>
+                                        <option value="Floor & Surface Cleaning">Floor & Surface Cleaning</option>
+                                        <option value="Upholstery & Furniture Cleaning">Upholstery & Furniture Cleaning</option>
+                                        <option value="Window & Glass Cleaning">Window & Glass Cleaning</option>
+                                        <option value="Event Venue Cleaning">Event Venue Cleaning</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="prefDate" class="block text-xs font-semibold text-slate-700 mb-1">Preferred Date</label>
+                                <input type="date" id="prefDate" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-xs sm:text-sm bg-white">
+                            </div>
+
+                            <div>
+                                <label for="messageText" class="block text-xs font-semibold text-slate-700 mb-1">Space Description & Specific Details</label>
+                                <textarea id="messageText" rows="4" placeholder="Tell us more about the space size, special requests, or address area..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-xs sm:text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gradient-to-r from-accent-500 to-amber-600 hover:from-amber-500 hover:to-accent-500 text-navy-950 font-bold py-4 rounded-xl shadow-lg transition-all text-sm flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Send Enquiry via WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 text-slate-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+                
+                <!-- Brand Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="#home" class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-teal-500 text-navy-950 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-sparkles text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="text-lg font-extrabold text-white block">GG & B</span>
+                            <span class="text-[10px] uppercase tracking-widest text-teal-400 font-semibold block -mt-1">Cleaning Services</span>
+                        </div>
+                    </a>
+                    <p class="text-xs sm:text-sm leading-relaxed text-slate-400 max-w-sm">
+                        GG & B Cleaning Services is dedicated to transforming homes, offices, and commercial properties into spotless, fresh, and hygienic environments.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#" aria-label="Facebook Page Placeholder" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-teal-400 text-slate-400 hover:text-teal-400 flex items-center justify-center text-sm transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram Profile Placeholder" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-teal-400 text-slate-400 hover:text-teal-400 flex items-center justify-center text-sm transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/2347064973487" aria-label="WhatsApp Contact" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-teal-400 text-slate-400 hover:text-teal-400 flex items-center justify-center text-sm transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-teal-400 transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-teal-400 transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition-colors">Our Services</a></li>
+                        <li><a href="#process" class="hover:text-teal-400 transition-colors">Cleaning Process</a></li>
+                        <li><a href="#portfolio" class="hover:text-teal-400 transition-colors">Project Portfolio</a></li>
+                        <li><a href="#contact" class="hover:text-teal-400 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services List -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Services</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#services" class="hover:text-teal-400 transition-colors">Residential Cleaning</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition-colors">Deep Cleaning</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition-colors">Office Cleaning</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition-colors">Post-Construction</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition-colors">Move-In / Move-Out</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition-colors">Commercial Cleaning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Direct Contact -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Contact Info</h4>
+                    <div class="space-y-2 text-xs">
+                        <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-teal-400"></i> +234 706 497 3487</p>
+                        <p class="flex items-center gap-2 break-all"><i class="fa-solid fa-envelope text-teal-400"></i> ggandcleaningservices@gmail.com</p>
+                        <p class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-teal-400"></i> WhatsApp Instant Chat</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; <span id="currentYear"></span> GG & B Cleaning Services. All rights reserved.</p>
+                <p class="text-[11px]">Designed for cleanliness, reliability & high conversion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Floating Button -->
+    <button id="backToTop" aria-label="Back to Top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-teal-600 text-white shadow-xl hover:bg-accent-500 hover:text-navy-950 flex items-center justify-center transition-all duration-300 opacity-0 invisible z-30 focus:outline-none">
+        <i class="fa-solid fa-arrow-up text-base"></i>
+    </button>
+
+    <!-- JAVASCRIPT FUNCTIONALITY -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. DYNAMIC COPYRIGHT YEAR
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // 2. SCROLL PROGRESS INDICATOR & HEADER STYLING
+            const scrollProgress = document.getElementById('scrollProgress');
+            const mainHeader = document.getElementById('mainHeader');
+            const backToTopBtn = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', () => {
+                const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = (window.scrollY / totalHeight) * 100;
+                scrollProgress.style.width = `${progress}%`;
+
+                if (window.scrollY > 100) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible');
+                    backToTopBtn.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'invisible');
+                    backToTopBtn.classList.remove('opacity-100', 'visible');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // 3. MOBILE MENU TOGGLE
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                } else {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-xmark');
+                }
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+
+            // 4. PORTFOLIO FILTERING
+            const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-navy-900', 'text-white', 'shadow-md');
+                        b.classList.add('bg-slate-100', 'text-slate-700');
+                    });
+                    btn.classList.remove('bg-slate-100', 'text-slate-700');
+                    btn.classList.add('bg-navy-900', 'text-white', 'shadow-md');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // 5. LIGHTBOX MODAL & NAVIGATION
+            const lightboxModal = document.getElementById('lightboxModal');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+            const lightboxDesc = document.getElementById('lightboxDesc');
+            const closeLightbox = document.getElementById('closeLightbox');
+            const prevLightbox = document.getElementById('prevLightbox');
+            const nextLightbox = document.getElementById('nextLightbox');
+
+            let currentItemIndex = 0;
+            const visibleItems = () => Array.from(portfolioItems).filter(i => i.style.display !== 'none');
+
+            function updateLightbox(index) {
+                const items = visibleItems();
+                if (items.length === 0) return;
+                
+                if (index < 0) currentItemIndex = items.length - 1;
+                else if (index >= items.length) currentItemIndex = 0;
+                else currentItemIndex = index;
+
+                const selected = items[currentItemIndex];
+                const img = selected.querySelector('img');
+                
+                lightboxImage.src = img.src;
+                lightboxTitle.textContent = selected.getAttribute('data-title') || '';
+                lightboxDesc.textContent = selected.getAttribute('data-desc') || '';
+            }
+
+            portfolioItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const items = visibleItems();
+                    currentItemIndex = items.indexOf(item);
+                    updateLightbox(currentItemIndex);
+                    lightboxModal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            closeLightbox.addEventListener('click', () => {
+                lightboxModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+
+            prevLightbox.addEventListener('click', () => updateLightbox(currentItemIndex - 1));
+            nextLightbox.addEventListener('click', () => updateLightbox(currentItemIndex + 1));
+
+            document.addEventListener('keydown', (e) => {
+                if (!lightboxModal.classList.contains('hidden')) {
+                    if (e.key === 'Escape') {
+                        lightboxModal.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                    } else if (e.key === 'ArrowLeft') {
+                        updateLightbox(currentItemIndex - 1);
+                    } else if (e.key === 'ArrowRight') {
+                        updateLightbox(currentItemIndex + 1);
+                    }
+                }
+            });
+
+            // 6. BEFORE & AFTER DRAG SLIDER
+            const baContainer = document.getElementById('baSlider');
+            const baBeforeImg = document.getElementById('baBeforeImg');
+            const baHandle = document.getElementById('baHandle');
+            let isDragging = false;
+
+            function setSliderPosition(x) {
+                const rect = baContainer.getBoundingClientRect();
+                let position = x - rect.left;
+                if (position < 0) position = 0;
+                if (position > rect.width) position = rect.width;
+                const percentage = (position / rect.width) * 100;
+
+                baBeforeImg.style.width = `${percentage}%`;
+                baHandle.style.left = `${percentage}%`;
+            }
+
+            baContainer.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                setSliderPosition(e.clientX);
+            });
+
+            window.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                setSliderPosition(e.clientX);
+            });
+
+            // Touch support for Mobile
+            baContainer.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                setSliderPosition(e.touches[0].clientX);
+            });
+
+            window.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+
+            window.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                setSliderPosition(e.touches[0].clientX);
+            });
+
+            // 7. TESTIMONIAL CAROUSEL
+            const testimonialTrack = document.getElementById('testimonialTrack');
+            const prevTestimonial = document.getElementById('prevTestimonial');
+            const nextTestimonial = document.getElementById('nextTestimonial');
+            const dots = document.querySelectorAll('#testimonialDots button');
+            let currentSlide = 0;
+            const totalSlides = 3;
+            let autoSlideInterval;
+
+            function goToSlide(index) {
+                if (index < 0) currentSlide = totalSlides - 1;
+                else if (index >= totalSlides) currentSlide = 0;
+                else currentSlide = index;
+
+                testimonialTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+                dots.forEach((dot, i) => {
+                    if (i === currentSlide) {
+                        dot.classList.remove('bg-slate-700');
+                        dot.classList.add('bg-accent-500');
+                    } else {
+                        dot.classList.remove('bg-accent-500');
+                        dot.classList.add('bg-slate-700');
+                    }
+                });
+            }
+
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(() => {
+                    goToSlide(currentSlide + 1);
+                }, 5000);
+            }
+
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            prevTestimonial.addEventListener('click', () => {
+                goToSlide(currentSlide - 1);
+            });
+
+            nextTestimonial.addEventListener('click', () => {
+                goToSlide(currentSlide + 1);
+            });
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => goToSlide(i));
+            });
+
+            const testimonialSlider = document.getElementById('testimonialSlider');
+            testimonialSlider.addEventListener('mouseenter', stopAutoSlide);
+            testimonialSlider.addEventListener('mouseleave', startAutoSlide);
+
+            startAutoSlide();
+
+            // 8. FAQ ACCORDION
+            const faqBtns = document.querySelectorAll('.faq-btn');
+
+            faqBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    
+                    const isOpen = !content.classList.contains('hidden');
+
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                    document.querySelectorAll('.faq-btn i').forEach(i => i.classList.remove('rotate-180'));
+
+                    if (!isOpen) {
+                        content.classList.remove('hidden');
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+
+            // 9. WHATSAPP CONTACT FORM SUBMISSION FLOW
+            const contactForm = document.getElementById('contactForm');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const name = document.getElementById('fullName').value;
+                const phone = document.getElementById('phoneNum').value;
+                const email = document.getElementById('emailAddr').value || 'Not specified';
+                const service = document.getElementById('serviceSelect').value;
+                const date = document.getElementById('prefDate').value || 'Flexible';
+                const message = document.getElementById('messageText').value || 'No extra message';
+
+                const formattedMessage = `Hello GG & B Cleaning Services, I would like to make an enquiry/booking:
+- *Full Name:* ${name}
+- *Phone:* ${phone}
+- *Email:* ${email}
+- *Service Needed:* ${service}
+- *Preferred Date:* ${date}
+- *Details:* ${message}`;
+
+                const whatsappUrl = `https://wa.me/2347064973487?text=${encodeURIComponent(formattedMessage)}`;
+                window.open(whatsappUrl, '_blank');
+            });
+
+            // 10. SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER)
+            const revealElements = document.querySelectorAll('.reveal-element');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
