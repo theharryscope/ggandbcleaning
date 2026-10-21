@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | GG & B Cleaning Services</title>
+    <meta name="description" content="Learn about GG & B Cleaning Services. We are dedicated to providing pristine, reliable residential, commercial, deep cleaning, and post-construction cleaning solutions in Nigeria.">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="About GG & B Cleaning Services | Professional Cleaning Team">
+    <meta property="og:description" content="Discover our mission, vision, core values, and quality standards for home and office cleaning.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0f2942',
+                            900: '#0B192C',
+                            950: '#060d18'
+                        },
+                        teal: {
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0D9488',
+                            700: '#0f766e'
+                        },
+                        accent: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles & Utilities */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC;
+            color: #1E293B;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Glassmorphism Navigation */
+        .glass-nav {
+            background: rgba(11, 25, 44, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B192C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0D9488;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b;
+        }
+
+        /* Reveal Animation Classes */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-teal-500 via-accent-500 to-teal-400 z-50 transition-all duration-150" style="width: 0%;"></div>
+
+    <!-- MAIN HEADER & NAVIGATION -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-slate-800/80 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo -->
+                <a href="index.html#home" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-navy-900 border border-teal-400/30 flex items-center justify-center text-accent-500 shadow-lg group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-sparkles text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight text-white block font-heading">GG & B</span>
+                        <span class="text-xs uppercase tracking-widest text-teal-400 font-semibold block -mt-1">Cleaning Services</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="index.html#home" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 transition-colors">Home</a>
+                    <a href="about.html" class="nav-link text-sm font-semibold text-teal-400 border-b-2 border-teal-400 py-1 transition-colors">About Us</a>
+                    
+                    <!-- Dropdown Menu -->
+                    <div class="relative group">
+                        <a href="index.html#services" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 flex items-center gap-1 transition-colors py-2">
+                            Services <i class="fa-solid fa-chevron-down text-xs opacity-70 group-hover:rotate-180 transition-transform duration-200"></i>
+                        </a>
+                        <div class="absolute top-full left-0 w-64 bg-navy-900 border border-slate-800 rounded-xl shadow-2xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                            <a href="index.html#services" class="block px-4 py-2 text-xs font-medium text-slate-300 hover:bg-teal-600/20 hover:text-teal-400">Residential Cleaning</a>
+                            <a href="index.html#services" class="block px-4 py-2 text-xs font-medium text-slate-300 hover:bg-teal-600/20 hover:text-teal-400">Deep Cleaning</a>
+                            <a href="index.html#services" class="block px-4 py-2 text-xs font-medium text-slate-300 hover:bg-teal-600/20 hover:text-teal-400">Office & Corporate</a>
+                            <a href="index.html#services" class="block px-4 py-2 text-xs font-medium text-slate-300 hover:bg-teal-600/20 hover:text-teal-400">Post-Construction</a>
+                            <a href="index.html#services" class="block px-4 py-2 text-xs font-medium text-slate-300 hover:bg-teal-600/20 hover:text-teal-400">Move-In / Move-Out</a>
+                            <a href="index.html#services" class="block px-4 py-2 text-xs font-medium text-slate-300 hover:bg-teal-600/20 hover:text-teal-400">Commercial Spaces</a>
+                        </div>
+                    </div>
+
+                    <a href="index.html#process" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 transition-colors">Process</a>
+                    <a href="index.html#portfolio" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 transition-colors">Portfolio</a>
+                    <a href="index.html#testimonials" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 transition-colors">Testimonials</a>
+                    <a href="index.html#faq" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 transition-colors">FAQ</a>
+                    <a href="index.html#contact" class="nav-link text-sm font-medium text-slate-200 hover:text-accent-500 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20book%20a%20cleaning%20session." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-amber-600 hover:from-amber-500 hover:to-accent-500 text-navy-950 font-semibold px-5 py-2.5 rounded-full text-sm shadow-md hover:shadow-accent-500/20 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Book a Cleaning</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-navy-950/95 border-b border-slate-800 backdrop-blur-md">
+            <div class="px-4 pt-4 pb-6 space-y-3">
+                <a href="index.html#home" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">Home</a>
+                <a href="about.html" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-semibold text-teal-400 bg-teal-600/10">About Us</a>
+                <a href="index.html#services" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">Our Services</a>
+                <a href="index.html#process" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">Our Process</a>
+                <a href="index.html#portfolio" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">Portfolio & Gallery</a>
+                <a href="index.html#testimonials" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">Testimonials</a>
+                <a href="index.html#faq" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">FAQ</a>
+                <a href="index.html#contact" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-teal-600/20 hover:text-teal-400">Contact Us</a>
+                <div class="pt-2">
+                    <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-accent-500 text-navy-950 font-bold px-4 py-3 rounded-xl text-center">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Book via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGE HERO BANNER -->
+        <section class="bg-navy-900 text-white relative py-16 lg:py-24 overflow-hidden border-b border-slate-800">
+            <!-- Background Glow FX -->
+            <div class="absolute -top-24 -right-24 w-80 h-80 bg-teal-500/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-accent-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <!-- Breadcrumb Navigation -->
+                <nav class="flex justify-center items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">
+                    <a href="index.html" class="hover:text-teal-400 transition-colors">Home</a>
+                    <span>/</span>
+                    <span class="text-teal-400">About Us</span>
+                </nav>
+
+                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white font-heading">
+                    About <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-accent-400">GG & B Cleaning Services</span>
+                </h1>
+                <p class="mt-4 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                    Committed to maintaining pristine, hygienic, comfortable, and presentable environments for homes and businesses across Nigeria.
+                </p>
+            </div>
+        </section>
+
+        <!-- DETAILED COMPANY OVERVIEW -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Image Composition -->
+                    <div class="lg:col-span-6 reveal-element">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-teal-500 to-navy-900 rounded-3xl rotate-2 scale-95 opacity-20 blur-md"></div>
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=80" alt="Professional Cleaner dusting modern apartment" class="relative rounded-3xl shadow-xl border border-slate-200 w-full h-[460px] object-cover">
+                            
+                            <!-- Overlay Highlight Box -->
+                            <div class="absolute -bottom-6 -right-6 bg-navy-900 text-white p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs border border-slate-800">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-teal-500 text-navy-950 flex items-center justify-center font-bold shrink-0">
+                                        <i class="fa-solid fa-broom text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-bold uppercase tracking-wider text-teal-400">Clean Space Promise</p>
+                                        <p class="text-[11px] text-slate-300 mt-0.5">Meticulous cleaning standards for every client.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Narrative -->
+                    <div class="lg:col-span-6 space-y-6 reveal-element">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3.5 py-1 rounded-full border border-teal-200">Who We Are</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Elevating Cleanliness Standards Across Nigeria</h2>
+                        </div>
+                        
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            <strong>GG & B Cleaning Services</strong> was established with a clear mandate: to deliver high-quality, reliable, and thorough cleaning solutions that create healthy living and working environments.
+                        </p>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Whether it is a bustling corporate office, a newly constructed building needing post-construction debris extraction, or a private residence requiring deep sanitization, we approach every project with detail-oriented discipline and modern cleaning techniques.
+                        </p>
+
+                        <div class="space-y-3 pt-2">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-lg mt-0.5"></i>
+                                <p class="text-xs sm:text-sm text-slate-700"><strong>Residential Excellence:</strong> Transforming homes into refreshing, dust-free sanctuaries.</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-lg mt-0.5"></i>
+                                <p class="text-xs sm:text-sm text-slate-700"><strong>Commercial Hygiene:</strong> Enhancing corporate reputation through immaculate office maintenance.</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-teal-600 text-lg mt-0.5"></i>
+                                <p class="text-xs sm:text-sm text-slate-700"><strong>Post-Construction Handover:</strong> Removing stubborn plaster, tile stains, and construction dust.</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20would%20like%20to%20discuss%20my%20cleaning%20needs." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-accent-500 hover:bg-amber-500 text-navy-950 font-bold px-6 py-3.5 rounded-xl shadow-md transition-all text-sm">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Speak With Our Team</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION, VISION & CORE VALUES -->
+        <section class="py-20 bg-slate-50 border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                    <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-100/60 px-3.5 py-1.5 rounded-full">Guided By Principles</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Mission, Vision & Core Values</h2>
+                    <p class="text-slate-600 mt-3 text-sm sm:text-base">Our operational standards are built on trust, safety, and consistent quality.</p>
+                </div>
+
+                <!-- Mission & Vision Dual Banner -->
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <!-- Mission -->
+                    <div class="bg-navy-900 text-white p-8 sm:p-10 rounded-3xl shadow-xl relative overflow-hidden flex flex-col justify-between reveal-element">
+                        <div class="absolute -right-8 -bottom-8 w-40 h-40 bg-teal-500/10 rounded-full blur-2xl"></div>
+                        <div class="space-y-4 relative z-10">
+                            <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Our Mission</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                                To elevate living and working standards across Nigeria through meticulous, reliable, and tailored cleaning solutions that foster health, comfort, and productivity.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Vision -->
+                    <div class="bg-white p-8 sm:p-10 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between reveal-element">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-2xl bg-teal-600/10 text-teal-600 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy-900">Our Vision</h3>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                                To be Nigeria's premier choice for eco-conscious, dependable, and high-quality cleaning services—setting unmatched benchmark standards in property hygiene.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 Core Values Cards Grid -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Value 1 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-lg transition-all reveal-element">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-900">Professional Integrity</h4>
+                        <p class="text-slate-600 text-xs mt-2 leading-relaxed">Honest communication, transparent pricing with no hidden charges, and respectful conduct on every site.</p>
+                    </div>
+
+                    <!-- Value 2 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-lg transition-all reveal-element">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-900">Uncompromising Quality</h4>
+                        <p class="text-slate-600 text-xs mt-2 leading-relaxed">We double-check every room, surface, corner, and appliance to ensure thorough cleaning outcomes.</p>
+                    </div>
+
+                    <!-- Value 3 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-lg transition-all reveal-element">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-clock font-bold"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-900">Reliability & Timeliness</h4>
+                        <p class="text-slate-600 text-xs mt-2 leading-relaxed">Respecting your time by arriving on schedule and completing cleaning within agreed turnaround times.</p>
+                    </div>
+
+                    <!-- Value 4 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-lg transition-all reveal-element">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-900">Eco-Friendly Standards</h4>
+                        <p class="text-slate-600 text-xs mt-2 leading-relaxed">Utilizing safe solutions that effectively sanitize spaces without damaging delicate surfaces or indoor air quality.</p>
+                    </div>
+
+                    <!-- Value 5 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-lg transition-all sm:col-span-2 lg:col-span-1 reveal-element">
+                        <div class="w-10 h-10 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-heart-circle-check"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy-900">Customer Delight</h4>
+                        <p class="text-slate-600 text-xs mt-2 leading-relaxed">Tailoring our cleaning checklist directly around unique client requests to guarantee complete satisfaction.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WHY WORK WITH US / DIFFERENTIATORS -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                    <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200">The GG & B Advantage</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Why Work With Us?</h2>
+                    <p class="text-slate-600 mt-3 text-sm sm:text-base">Discover what sets our professional cleaning services apart.</p>
+                </div>
+
+                <!-- 6 Differentiators Grid -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 space-y-3 hover:border-teal-400 transition-colors reveal-element">
+                        <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900">Trained Specialists</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Our cleaners understand surface care—from granite tops to wooden parquet and glass facades.</p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 space-y-3 hover:border-teal-400 transition-colors reveal-element">
+                        <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900">Customized Schedules</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">One-time deep cleans, recurring weekly visits, or after-hours corporate cleaning tailored for you.</p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 space-y-3 hover:border-teal-400 transition-colors reveal-element">
+                        <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-pump-soap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900">Safe Cleaning Supplies</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Effective, surface-friendly chemical solutions that eliminate germs without harsh lingering odors.</p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 space-y-3 hover:border-teal-400 transition-colors reveal-element">
+                        <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-naira-sign"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900">Affordable Pricing (₦)</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Transparent estimates calculated fairly based on property dimensions and scope of work in Nigerian Naira.</p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 space-y-3 hover:border-teal-400 transition-colors reveal-element">
+                        <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-shield-cat"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900">Safety-First Protocols</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Vetted staff trained to adhere to property safety, confidentiality, and hygiene guidelines.</p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 space-y-3 hover:border-teal-400 transition-colors reveal-element">
+                        <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900">Responsive Support</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Quick response via WhatsApp and phone (+234 706 497 3487) for bookings and prompt support.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- STANDARD OPERATING PROCESS -->
+        <section class="py-20 bg-navy-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                    <span class="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-500/10 px-3.5 py-1.5 rounded-full border border-teal-500/30">How We Operate</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Our Operating Standard</h2>
+                    <p class="text-slate-400 mt-3 text-sm sm:text-base">A disciplined 4-step workflow ensuring high-quality cleaning execution every time.</p>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-8">
+                    
+                    <div class="bg-navy-950 p-6 rounded-2xl border border-slate-800 space-y-4 text-center reveal-element">
+                        <div class="w-12 h-12 mx-auto rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-lg border border-teal-500/40">
+                            1
+                        </div>
+                        <h4 class="font-bold text-white text-base">Consultation & Scope</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">We review your space details, specific areas needing deep attention, and target timelines.</p>
+                    </div>
+
+                    <div class="bg-navy-950 p-6 rounded-2xl border border-slate-800 space-y-4 text-center reveal-element">
+                        <div class="w-12 h-12 mx-auto rounded-full bg-accent-500/20 text-accent-400 flex items-center justify-center font-bold text-lg border border-accent-500/40">
+                            2
+                        </div>
+                        <h4 class="font-bold text-white text-base">Tailored Quote</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">Transparent quote provided based on property size, service type, and extra add-ons requested.</p>
+                    </div>
+
+                    <div class="bg-navy-950 p-6 rounded-2xl border border-slate-800 space-y-4 text-center reveal-element">
+                        <div class="w-12 h-12 mx-auto rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-lg border border-teal-500/40">
+                            3
+                        </div>
+                        <h4 class="font-bold text-white text-base">Precision Execution</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">Our trained team arrives equipped to scrub, dust, polish, and sanitize according to scope.</p>
+                    </div>
+
+                    <div class="bg-navy-950 p-6 rounded-2xl border border-slate-800 space-y-4 text-center reveal-element">
+                        <div class="w-12 h-12 mx-auto rounded-full bg-accent-500/20 text-accent-400 flex items-center justify-center font-bold text-lg border border-accent-500/40">
+                            4
+                        </div>
+                        <h4 class="font-bold text-white text-base">Post-Clean Inspection</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">We conduct a thorough final walkthrough to confirm every room meets GG & B standards.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- QUALITY & SAFETY COMMITMENT -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-12">
+                    <div class="grid lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-8 space-y-4 reveal-element">
+                            <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-100/60 px-3.5 py-1 rounded-full">Safety & Quality</span>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-900">Background-Vetted Cleaners & Hygienic Guidelines</h2>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                                At GG & B Cleaning Services, your security and health come first. Every member of our cleaning crew undergoes thorough background checks and training on hygienic techniques, chemical safety, and respectful client communication.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4 shrink-0 reveal-element">
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 flex items-center gap-3">
+                                <i class="fa-solid fa-user-shield text-2xl text-teal-600"></i>
+                                <div>
+                                    <h5 class="text-xs font-bold text-navy-900">Vetted Staff</h5>
+                                    <p class="text-[11px] text-slate-500">Screened and trusted team members</p>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 flex items-center gap-3">
+                                <i class="fa-solid fa-virus-slash text-2xl text-teal-600"></i>
+                                <div>
+                                    <h5 class="text-xs font-bold text-navy-900">Sanitized Tools</h5>
+                                    <p class="text-[11px] text-slate-500">Disinfected microfiber & mops</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION BANNER -->
+        <section class="py-16 bg-gradient-to-r from-teal-700 via-teal-600 to-navy-900 text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-3 text-center md:text-left">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ready to Experience GG & B Cleaning?</h2>
+                    <p class="text-teal-100 text-sm sm:text-base max-w-2xl">Book your home, office, or post-construction cleaning session in minutes.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 shrink-0 w-full sm:w-auto">
+                    <a href="https://wa.me/2347064973487?text=Hello%20GG%20%26%20B%20Cleaning%20Services%2C%20I%20read%20about%20your%20company%20and%20would%20like%20to%20book%20a%20cleaning." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-amber-500 text-navy-950 font-bold px-6 py-3.5 rounded-xl shadow-lg transition-all text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Book via WhatsApp</span>
+                    </a>
+                    <a href="tel:+2347064973487" class="inline-flex items-center justify-center gap-2 bg-navy-950 hover:bg-navy-900 text-white font-semibold px-6 py-3.5 rounded-xl border border-slate-700 transition-all text-sm">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                        <span>Call Us Directly</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 text-slate-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+                
+                <!-- Brand Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="index.html#home" class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-teal-500 text-navy-950 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-sparkles text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="text-lg font-extrabold text-white block">GG & B</span>
+                            <span class="text-[10px] uppercase tracking-widest text-teal-400 font-semibold block -mt-1">Cleaning Services</span>
+                        </div>
+                    </a>
+                    <p class="text-xs sm:text-sm leading-relaxed text-slate-400 max-w-sm">
+                        GG & B Cleaning Services is dedicated to transforming homes, offices, and commercial properties into spotless, fresh, and hygienic environments.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#" aria-label="Facebook Page Placeholder" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-teal-400 text-slate-400 hover:text-teal-400 flex items-center justify-center text-sm transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram Profile Placeholder" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-teal-400 text-slate-400 hover:text-teal-400 flex items-center justify-center text-sm transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/2347064973487" aria-label="WhatsApp Contact" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 hover:border-teal-400 text-slate-400 hover:text-teal-400 flex items-center justify-center text-sm transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="index.html#home" class="hover:text-teal-400 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-teal-400 font-semibold">About Us</a></li>
+                        <li><a href="index.html#services" class="hover:text-teal-400 transition-colors">Our Services</a></li>
+                        <li><a href="index.html#process" class="hover:text-teal-400 transition-colors">Cleaning Process</a></li>
+                        <li><a href="index.html#portfolio" class="hover:text-teal-400 transition-colors">Project Portfolio</a></li>
+                        <li><a href="index.html#contact" class="hover:text-teal-400 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services List -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Services</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="index.html#services" class="hover:text-teal-400 transition-colors">Residential Cleaning</a></li>
+                        <li><a href="index.html#services" class="hover:text-teal-400 transition-colors">Deep Cleaning</a></li>
+                        <li><a href="index.html#services" class="hover:text-teal-400 transition-colors">Office Cleaning</a></li>
+                        <li><a href="index.html#services" class="hover:text-teal-400 transition-colors">Post-Construction</a></li>
+                        <li><a href="index.html#services" class="hover:text-teal-400 transition-colors">Move-In / Move-Out</a></li>
+                        <li><a href="index.html#services" class="hover:text-teal-400 transition-colors">Commercial Cleaning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Direct Contact -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Contact Info</h4>
+                    <div class="space-y-2 text-xs">
+                        <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-teal-400"></i> +234 706 497 3487</p>
+                        <p class="flex items-center gap-2 break-all"><i class="fa-solid fa-envelope text-teal-400"></i> ggandcleaningservices@gmail.com</p>
+                        <p class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-teal-400"></i> WhatsApp Instant Chat</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; <span id="currentYear"></span> GG & B Cleaning Services. All rights reserved.</p>
+                <p class="text-[11px]">Designed for cleanliness, reliability & high conversion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Floating Button -->
+    <button id="backToTop" aria-label="Back to Top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-teal-600 text-white shadow-xl hover:bg-accent-500 hover:text-navy-950 flex items-center justify-center transition-all duration-300 opacity-0 invisible z-30 focus:outline-none">
+        <i class="fa-solid fa-arrow-up text-base"></i>
+    </button>
+
+    <!-- JAVASCRIPT FUNCTIONALITY -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. DYNAMIC COPYRIGHT YEAR
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // 2. SCROLL PROGRESS INDICATOR & BACK TO TOP BUTTON
+            const scrollProgress = document.getElementById('scrollProgress');
+            const backToTopBtn = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', () => {
+                const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = (window.scrollY / totalHeight) * 100;
+                scrollProgress.style.width = `${progress}%`;
+
+                if (window.scrollY > 100) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible');
+                    backToTopBtn.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'invisible');
+                    backToTopBtn.classList.remove('opacity-100', 'visible');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // 3. MOBILE MENU TOGGLE
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                } else {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-xmark');
+                }
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+
+            // 4. SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER)
+            const revealElements = document.querySelectorAll('.reveal-element');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
